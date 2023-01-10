@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Praticando</title>
+	<style type="text/css">
+		body{
+			background: firebrick;
+		}
+		.frame{
+			position: absolute;
+  			top: 50%;
+			left: 50%;
+  			width: 400px;
+  			height: 400px;
+  			margin-top: -200px;
+  			margin-left: -200px;
+  			border-radius: 2px;
+  			box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+ 			overflow: hidden;
+ 			background-color: black;
+  			color: #fff;
+  			text-align: center;
+
+		}
+		input{
+			margin-top: 30px;
+			text-align: center;
+		}
+		div#res{
+			margin-top: 30px;
+			text-align: center;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="frame">
+		<h1>Calculo da media</h1>
+		<label>Digite a primeira nota:</label>
+		<input type="number" name="v1" id="v1">
+		<br>
+		<label>Digite a segunda nota:</label>
+		<input type="number" name="v2" id="v2">
+		<input type="button" value="media" id="b"onclick="media()">
+		<div id="res">Rasultado</div>
+	</div>
+
+	<script type="text/javascript">
+		function media() {
+			var n1 = document.querySelector('input#v1')
+			var n2 = document.querySelector('input#v2')
+			var res = document.querySelector('div#res')
+
+			var v1 = Number(n1.value)
+			var v2 = Number(n2.value)
+
+			var m = (v1+v2)/2
+			res.innerHTML = `O valor da media entre ${v1} e ${v2}<br>foi de ${m}`
+		}
+
+
+
+	</script>
+</body>
+</html>
