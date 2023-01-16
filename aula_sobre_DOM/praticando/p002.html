@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Somando numeros</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<input type="number" name="v1" id="v1">+
+	<input type="number" name="v2" id="v2">
+	<input type="button" value="somar" onclick="somar()">
+	<div id="res">Resposta</div>
+
+	<script type="text/javascript">
+		function somar(){
+			var n1 = document.querySelector('input#v1')
+			var n2 = document.querySelector('input#v2')
+			var res = document.querySelector('div#res')
+
+			var v1 = Number(n1.value)
+			var v2 = Number(n2.value)
+
+			var s = v1+v2
+
+			res.innerHTML = `A soma entre ${v1} + ${v2} = ${s}`
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nacionalidade</title>
+</head>
+<body>
+	<h1>Nacionalidade</h1>
+	<input type="text" name="pais" id="pais">
+	<input type="button" value="ver" onclick="ver()">
+	<div id="res">Resposta</div>
+
+	<script type="text/javascript">
+		function ver(){
+			var pais = document.querySelector('input#pais').value
+			var res = document.querySelector('div#res')
+
+			res.innerHTML = `Quem vive em <strong>${pais}</strong> é `
+
+			if (pais == 'Brasil') {
+				res.innerHTML += "Brasileiro"
+			} else{
+				res.innerHTML += "Estrangeiro"
+			}
+		}
+	</script>
+</body>
+</html>
